@@ -1,0 +1,34 @@
+
+.progress-ring__circle {
+    transition: 0.35s stroke-dashoffset;
+    /* axis compensation */
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+
+.cpb-progress-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.back-ring, .front-ring{
+    grid-area: 1/1/1/1;
+    width: 100%;
+    height: 100%;
+}
+
+.progress-icon{
+    grid-area: 1/1/1/1;
+    width: 25%;
+    height: 25%;
+}
+
+.progress-text{
+    grid-area: 1/1/1/1;
+    margin: 0;
+    color: white;
+    font-weight: bold;
+}

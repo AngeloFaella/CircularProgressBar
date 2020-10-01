@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="circularProgressBar.css">
+    <title>Test</title>
+
+    <style>
+        html, body {
+            background-color: rgb(117, 117, 117);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            position: relative;
+            margin: 0;
+        }  
+    </style>
+</head>
+
+<body>
+
+    <div id="progress1" class="cpb-progress-container"></div>
+    
+    <div id="progress2" class="cpb-progress-container"></div>
+    
+    <div id="progress3" class="cpb-progress-container"></div>
+        
+
+    <script src="circularProgressBar.js"></script>
+    <script>
+
+        // create progress bar
+        let yellowProgressBar = new CircularProgressBar(360, 360, 'progress1', {
+            strokeSize: 30,
+            backgroundColor: 'rgba(0,0,0,.35)',
+            strokeColor: 'yellow',
+            centerIcon: 'img/done_icon_yellow.svg'
+        });
+
+        let orangeProgressBar = new CircularProgressBar(360, 360, 'progress2', {strokeSize: 60});
+        orangeProgressBar.setBackgroundColor('rgba(0,0,0,.35)');
+        orangeProgressBar.setStrokeColor('orange');
+        orangeProgressBar.setCenterIcon('img/new_done_icon.svg');
+        orangeProgressBar.setProgress(75)
+        
+        let blueProgressBar = new CircularProgressBar(360, 360, 'progress3', {strokeSize: 40});
+        blueProgressBar.setBackgroundColor('rgba(0,0,0,.35)');
+        blueProgressBar.setStrokeColor('cyan');
+        //blueProgressBar.setCenterIcon('img/done_icon_blu.svg');
+        blueProgressBar.showProgressNumber(true);
+        blueProgressBar.setProgress(55)
+
+        // update progress bar
+        /*blueProgressBar.setProgress(0)
+        let progress = 0;
+        setInterval(() => {
+            blueProgressBar.setProgress(++progress)
+        }, 100); */
+
+        
+
+    </script>
+</body>
+</html>
