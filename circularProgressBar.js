@@ -70,12 +70,15 @@ class CircularProgressBar{
         this._container.appendChild(innerSvg);
 
         if(options.centerIcon) this.setCenterIcon(options.centerIcon)
+        if(options.showProgressNumber) this.showProgressNumber(true)
         this._oncomplete = options.oncomplete
 
         // save dim
         this._radius = this._outerCircle.r.baseVal.value;
         this._circumference = this._radius * 2 * Math.PI;
         this._outerCircle.style.strokeDasharray = `${this._circumference} ${this._circumference}`;
+
+        this.setProgress(0);
     }
 
     /**
