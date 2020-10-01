@@ -2,11 +2,17 @@
 
 ![examples](img/progressbars.png)
 
+
+[![GitHub license](https://img.shields.io/github/license/AngeloFaella/CircularProgressBar)](https://github.com/AngeloFaella/CircularProgressBar/blob/master/LICENSE)
+[![GitHub release](https://img.shields.io/github/release/AngeloFaella/CircularProgressBar)](https://GitHub.com/AngeloFaella/CircularProgressBar/releases/)
 ![Language](https://img.shields.io/badge/Javascript-darkgreen.svg)
 ![html](https://img.shields.io/badge/HTML5-orange.svg)
 ![css](https://img.shields.io/badge/CSS3-blue.svg)
 
-# CircularProgressBar
+
+
+
+# CircularProgressBar.js
 
 A lightweight circular progress bar made with Js, SVG circles, and CSS transitions.
 
@@ -17,13 +23,13 @@ Add these tags in yout HTML:
 <html>
   <head>
     <!-- Import CSS -->
-    <link rel="stylesheet" href="circularProgressBar.css">   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AngeloFaella/CircularProgressBar@1.0/circularProgressBar.css">
   </head>
   <body>
     <!-- Add a container with class="cpb-progress-container" -->
     <div id="my-container" class="cpb-progress-container"><div>  
     <!-- Import Js -->    
-    <script src="circularProgressBar.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AngeloFaella/CircularProgressBar@1.0/circularProgressBar.min.js"></script>
   </body>
 </html>
 ```
@@ -39,7 +45,7 @@ Then initialize the circular progress bar, for example:
             oncomplete: () => console.log('Task completed!')
     });
 ```
-See a **live example [here](example.html).**
+See a **live example [here](https://htmlpreview.github.io/?https://github.com/AngeloFaella/CircularProgressBar/master/example.html).**
   
 
 ## Documentation  
