@@ -1,22 +1,62 @@
 <a name="CircularProgressBar"></a>
 
-## CircularProgressBar
-CircularProgressBar v1.0 by Angelo FaellaA lightweight circular progress bar made with SVG circles and CSS transitions.
+![examples](img/progressbars.png)
 
-**Kind**: global class  
+![Language](https://img.shields.io/badge/Javascript-darkgreen.svg)
+![html](https://img.shields.io/badge/HTML5-orange.svg)
+![css](https://img.shields.io/badge/CSS3-blue.svg)
 
-* [CircularProgressBar](#CircularProgressBar)
-    * [new CircularProgressBar(width, height, container, [options])](#new_CircularProgressBar_new)
-    * [.setBackgroundColor(color)](#CircularProgressBar+setBackgroundColor)
-    * [.setStrokeColor(color)](#CircularProgressBar+setStrokeColor)
-    * [.showProgressNumber(enabled)](#CircularProgressBar+showProgressNumber)
-    * [.setCenterIcon(src)](#CircularProgressBar+setCenterIcon)
-    * [.setProgress(percent)](#CircularProgressBar+setProgress)
-    * [.getProgress()](#CircularProgressBar+getProgress) ⇒ <code>Number</code>
+# CircularProgressBar
+
+A lightweight circular progress bar made with Js, SVG circles, and CSS transitions.
+
+## How to use
+Add these tags in yout HTML:
+
+```html
+<html>
+  <head>
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="circularProgressBar.css">   
+  </head>
+  <body>
+    <!-- Add a container with class="cpb-progress-container" -->
+    <div id="my-container" class="cpb-progress-container"><div>  
+    <!-- Import Js -->    
+    <script src="circularProgressBar.js"></script>
+  </body>
+</html>
+```
+
+Then initialize the circular progress bar, for example:
+```js
+    let myProgressBar = new CircularProgressBar(360, 360, 'my-container', {
+            strokeSize: 30,
+            backgroundColor: 'rgba(0,0,0,.35)',
+            strokeColor: '#ff3333',
+            showProgressNumber: false,
+            centerIcon: 'img/done_icon_yellow.svg',
+            oncomplete: () => console.log('Task completed!')
+    });
+```
+See a **live example [here](example.html).**
+  
+
+## Documentation  
+
+Methods
+* [new CircularProgressBar(width, height, container, [options])](#new_CircularProgressBar_new)
+* [.setBackgroundColor(color)](#CircularProgressBar+setBackgroundColor)
+* [.setStrokeColor(color)](#CircularProgressBar+setStrokeColor)
+* [.showProgressNumber(enabled)](#CircularProgressBar+showProgressNumber)
+* [.setCenterIcon(src)](#CircularProgressBar+setCenterIcon)
+* [.setProgress(percent)](#CircularProgressBar+setProgress)
+* [.getProgress()](#CircularProgressBar+getProgress) ⇒ <code>Number</code>
 
 <a name="new_CircularProgressBar_new"></a>
 
 ### new CircularProgressBar(width, height, container, [options])
+**Kind**: constructor of [<code>CircularProgressBar</code>](#CircularProgressBar)  
 
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |

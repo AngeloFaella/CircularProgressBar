@@ -8,7 +8,7 @@
 
     <style>
         html, body {
-            background-color: rgb(117, 117, 117);
+            background-color: rgb(27, 27, 27);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -23,41 +23,53 @@
 
     <div id="progress1" class="cpb-progress-container"></div>
     
+    <div id="progress5" class="cpb-progress-container"></div>
+    
+    
     <div id="progress2" class="cpb-progress-container"></div>
     
     <div id="progress3" class="cpb-progress-container"></div>
+    
+    
+    
         
 
     <script src="circularProgressBar.js"></script>
     <script>
 
-        // create progress bar
         let yellowProgressBar = new CircularProgressBar(360, 360, 'progress1', {
             strokeSize: 30,
-            backgroundColor: 'rgba(0,0,0,.35)',
-            strokeColor: 'yellow',
+            backgroundColor: 'rgba(0,0,0,.7)',
+            strokeColor: 'gold',
             centerIcon: 'img/done_icon_yellow.svg'
         });
-
-        let orangeProgressBar = new CircularProgressBar(360, 360, 'progress2', {strokeSize: 60});
-        orangeProgressBar.setBackgroundColor('rgba(0,0,0,.35)');
-        orangeProgressBar.setStrokeColor('orange');
-        orangeProgressBar.setCenterIcon('img/new_done_icon.svg');
-        orangeProgressBar.setProgress(75)
         
-        let blueProgressBar = new CircularProgressBar(360, 360, 'progress3', {strokeSize: 40});
-        blueProgressBar.setBackgroundColor('rgba(0,0,0,.35)');
+        let orangeProgressBar = new CircularProgressBar(360, 360, 'progress2', {strokeSize: 60});
+        orangeProgressBar.setBackgroundColor('royalblue');
+        orangeProgressBar.setStrokeColor('navy');
+        orangeProgressBar.setCenterIcon('img/new_done_icon.svg');
+        
+        let blueProgressBar = new CircularProgressBar(360, 360, 'progress3', {strokeSize: 60});
+        blueProgressBar.setBackgroundColor('darkcyan');
         blueProgressBar.setStrokeColor('cyan');
-        //blueProgressBar.setCenterIcon('img/done_icon_blu.svg');
         blueProgressBar.showProgressNumber(true);
-        blueProgressBar.setProgress(55)
+        
+        let cpb5 = new CircularProgressBar(360, 360, 'progress5', {
+            strokeSize: 30,
+            backgroundColor: 'firebrick',
+            strokeColor: 'gold',
+            showProgressNumber: true
+        });
+        
 
-        // update progress bar
-        /*blueProgressBar.setProgress(0)
         let progress = 0;
         setInterval(() => {
-            blueProgressBar.setProgress(++progress)
-        }, 100); */
+            ++progress;
+            yellowProgressBar.setProgress(progress);
+            orangeProgressBar.setProgress(progress);
+            blueProgressBar.setProgress(progress);
+            cpb5.setProgress(progress);
+        }, 100);
 
         
 
